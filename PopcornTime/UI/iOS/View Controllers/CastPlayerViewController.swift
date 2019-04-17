@@ -340,7 +340,7 @@ class CastPlayerViewController: UIViewController, GCKRemoteMediaClientListener, 
     deinit {
         remoteMediaClient?.remove(self)
         server.isRunning ? server.stop() : ()
-        UIApplication.shared.isIdleTimerDisabled = false
+        UIApplication.shared.isIdleTimerDisabled = true
     }
     
     override var shouldAutorotate: Bool {

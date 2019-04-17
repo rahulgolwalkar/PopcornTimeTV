@@ -105,7 +105,7 @@ extension AppDelegate: PCTPlayerViewControllerDelegate, UIViewControllerTransiti
         UIApplication.shared.isIdleTimerDisabled = true
         let finishedLoading: (PreloadTorrentViewController, UIViewController) -> Void = { (loadingVc, playerVc) in
             // Enable here, so playerVc behavior is unchanged.
-            UIApplication.shared.isIdleTimerDisabled = false
+            UIApplication.shared.isIdleTimerDisabled = true
             let flag = UIDevice.current.userInterfaceIdiom != .tv
             self.dismiss(animated: flag) {
                 self.present(playerVc, animated: flag)
